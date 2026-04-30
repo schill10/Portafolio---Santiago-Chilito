@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Ingeniero de Sistemas</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>Dev.Systems</span>
+            </div>
+            
+            <!-- Menu de navegación -->
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#experience" class="nav-link">Experiencia</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            
+            <!-- Toggle Dark Mode y Menu Hamburguesa -->
+            <div class="nav-actions">
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hola, soy <span class="highlight">Alejandro Martínez</span>
+                </h1>
+                <p class="hero-subtitle">Ingeniero de Sistemas</p>
+                <p class="hero-description">
+                    Especializado en desarrollo full-stack, arquitectura de software y soluciones escalables. 
+                    Apasionado por crear tecnología que genera impacto.
+                </p>
+                
+                <!-- Botones de contacto -->
+                <div class="hero-buttons">
+                    <a href="https://linkedin.com" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="mailto:contacto@ejemplo.com" class="btn btn-tertiary">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="avatar-placeholder">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Con más de 5 años de experiencia en desarrollo de software, he liderado proyectos 
+                        complejos desde el diseño arquitectónico hasta la implementación y deployment en producción.
+                    </p>
+                    <p>
+                        Me especializo en crear soluciones escalables, eficientes y mantenibles. Tengo una 
+                        pasión por aprender nuevas tecnologías y compartir conocimiento con el equipo.
+                    </p>
+                    <p>
+                        Cuando no estoy codificando, disfruto contribuyendo a proyectos open-source y 
+                        escribiendo sobre arquitectura de software en mi blog.
+                    </p>
+                </div>
+                
+                <!-- Habilidades técnicas -->
+                <div class="skills-section">
+                    <h3>Habilidades Técnicas</h3>
+                    <div class="skills-grid">
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">React</div>
+                        <div class="skill-tag">Node.js</div>
+                        <div class="skill-tag">Docker</div>
+                        <div class="skill-tag">Kubernetes</div>
+                        <div class="skill-tag">AWS</div>
+                        <div class="skill-tag">PostgreSQL</div>
+                        <div class="skill-tag">MongoDB</div>
+                        <div class="skill-tag">GraphQL</div>
+                        <div class="skill-tag">REST API</div>
+                        <div class="skill-tag">Git</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            Plataforma de comercio electrónico completa con sistema de pagos, 
+                            carrito de compras y panel de administración.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-globe"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            Dashboard interactivo para visualización de datos en tiempo real 
+                            con gráficos dinámicos y reportes personalizables.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">D3.js</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-globe"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-server"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Microservicios API</h3>
+                        <p class="project-description">
+                            Arquitectura de microservicios escalable con autenticación JWT, 
+                            logging centralizado y documentación Swagger completa.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">FastAPI</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Kubernetes</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="#" target="_blank" class="project-link">
+                                <i class="fas fa-globe"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCIA ============ -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia</h2>
+            
+            <div class="timeline">
+                <!-- Experiencia 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Senior Full Stack Developer</h3>
+                        <p class="timeline-company">TechCorp Solutions</p>
+                        <p class="timeline-period">2022 - Presente</p>
+                        <p class="timeline-description">
+                            Lidero el equipo de desarrollo en la creación de aplicaciones escalables. 
+                            Responsable de arquitectura de software, mentoring y revisiones de código.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Full Stack Developer</h3>
+                        <p class="timeline-company">Digital Innovations Inc</p>
+                        <p class="timeline-period">2020 - 2022</p>
+                        <p class="timeline-description">
+                            Desarrollé múltiples proyectos frontend y backend. Implementé soluciones 
+                            con React, Node.js y bases de datos relacional y NoSQL.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Junior Developer</h3>
+                        <p class="timeline-company">StartUp Labs</p>
+                        <p class="timeline-period">2019 - 2020</p>
+                        <p class="timeline-description">
+                            Primeros pasos en desarrollo profesional. Aprendizaje de prácticas 
+                            ágiles, control de versiones y desarrollo en equipo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 4 (Educación) -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Ingeniero de Sistemas</h3>
+                        <p class="timeline-company">Universidad Nacional</p>
+                        <p class="timeline-period">2016 - 2019</p>
+                        <p class="timeline-description">
+                            Formación académica en ingeniería de software, estructuras de datos, 
+                            algoritmos y desarrollo de aplicaciones.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ponerse en Contacto</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Hablamos?</h3>
+                    <p>
+                        Me encanta conectar con profesionales del sector y explorar nuevas oportunidades. 
+                        Si tienes un proyecto en mente o solo quieres charlar sobre tecnología, 
+                        no dudes en escribirme.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contacto@ejemplo.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+57 (1) 1234-5678</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bogotá, Colombia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Enviar Mensaje</button>
+                    <p class="form-message" id="formMessage"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Alejandro Martínez</h4>
+                    <p>Ingeniero de Sistemas | Full Stack Developer</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Sígueme</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alejandro Martínez. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

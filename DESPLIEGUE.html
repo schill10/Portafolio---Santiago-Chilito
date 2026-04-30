@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Despliegue - Portafolio Web</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .subtitle { opacity: 0.9; font-size: 1.1rem; }
+        main { padding: 2rem; }
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        p, li { margin-bottom: 1rem; font-size: 1.05rem; }
+        ul { margin-left: 2rem; }
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        .code-block {
+            background: #282c34;
+            color: #61dafb;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            border-left: 4px solid #667eea;
+        }
+        .step {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        .success {
+            background: #d4edda;
+            border-left-color: #28a745;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 4px solid #ffc107;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: #f8f9fa;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        th { background: #667eea; color: white; }
+        footer {
+            background: #f8f9fa;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Guía de Despliegue</h1>
+            <p class="subtitle">Portafolio Web Profesional - Ingeniero de Sistemas</p>
+        </header>
+
+        <main>
+            <h2>📋 Tabla de Contenidos</h2>
+            <ul>
+                <li><a href="#local">Ejecutar localmente</a></li>
+                <li><a href="#github">Desplegar en GitHub Pages</a></li>
+                <li><a href="#vercel">Desplegar en Vercel</a></li>
+                <li><a href="#netlify">Desplegar en Netlify</a></li>
+                <li><a href="#dominio">Conectar dominio propio</a></li>
+                <li><a href="#tips">Tips de optimización</a></li>
+            </ul>
+
+            <!-- SECCIÓN LOCAL -->
+            <h2 id="local">💻 Opción 1: Ejecutar Localmente</h2>
+            
+            <h3>Método A: Abrir directamente</h3>
+            <div class="step">
+                <p>1. Abre tu gestor de archivos</p>
+                <p>2. Navega a la carpeta del portafolio</p>
+                <p>3. Haz doble click en <code>index.html</code></p>
+                <p>4. ¡Se abrirá en tu navegador! 🎉</p>
+            </div>
+
+            <h3>Método B: Servidor local (Recomendado)</h3>
+            <div class="step">
+                <p><strong>Con Python 3:</strong></p>
+                <div class="code-block">cd /ruta/del/portafolio
+python3 -m http.server 8000</div>
+                
+                <p><strong>Con Python 2:</strong></p>
+                <div class="code-block">python -m SimpleHTTPServer 8000</div>
+                
+                <p><strong>Con Node.js:</strong></p>
+                <div class="code-block">npx http-server -p 8000</div>
+            </div>
+
+            <p>Luego abre en tu navegador: <code>http://localhost:8000</code></p>
+
+            <div class="success">
+                ✓ <strong>Ventaja:</strong> No necesitas instalar nada, es la forma más fácil
+            </div>
+
+            <!-- SECCIÓN GITHUB PAGES -->
+            <h2 id="github">🐙 Opción 2: GitHub Pages (Gratuito)</h2>
+
+            <h3>Paso 1: Crear repositorio en GitHub</h3>
+            <div class="step">
+                <ol>
+                    <li>Ve a <a href="https://github.com/new" target="_blank">github.com/new</a></li>
+                    <li>Nombre del repositorio: <code>tu-usuario.github.io</code></li>
+                    <li>Selecciona "Public"</li>
+                    <li>Click en "Create repository"</li>
+                </ol>
+            </div>
+
+            <h3>Paso 2: Subir archivos</h3>
+            <div class="code-block">
+# Desde la carpeta del portafolio
+git init
+git add .
+git commit -m "Initial commit - Portafolio web"
+git branch -M main
+git remote add origin https://github.com/tu-usuario/tu-usuario.github.io.git
+git push -u origin main
+            </div>
+
+            <h3>Paso 3: Configurar GitHub Pages</h3>
+            <div class="step">
+                <ol>
+                    <li>Ve a tu repositorio en GitHub</li>
+                    <li>Settings → Pages</li>
+                    <li>Source: Branch "main"</li>
+                    <li>Espera 1-2 minutos</li>
+                    <li>Tu sitio estará en: <code>https://tu-usuario.github.io</code></li>
+                </ol>
+            </div>
+
+            <div class="success">
+                ✓ <strong>Ventaja:</strong> Totalmente gratuito, integrado con Git, actualizaciones fáciles
+            </div>
+
+            <!-- SECCIÓN VERCEL -->
+            <h2 id="vercel">▲ Opción 3: Vercel (Recomendado)</h2>
+
+            <h3>Paso 1: Conectar con GitHub</h3>
+            <div class="step">
+                <ol>
+                    <li>Ve a <a href="https://vercel.com" target="_blank">vercel.com</a></li>
+                    <li>Sign up with GitHub</li>
+                    <li>Autoriza Vercel</li>
+                </ol>
+            </div>
+
+            <h3>Paso 2: Importar proyecto</h3>
+            <div class="step">
+                <ol>
+                    <li>Click "New Project"</li>
+                    <li>Selecciona tu repositorio</li>
+                    <li>Configuración por defecto está bien</li>
+                    <li>Click "Deploy"</li>
+                </ol>
+            </div>
+
+            <div class="success">
+                ✓ <strong>Ventaja:</strong> Deployment automático, SSL gratis, dominio gratis, rendimiento excelente
+            </div>
+
+            <!-- SECCIÓN NETLIFY -->
+            <h2 id="netlify">🎯 Opción 4: Netlify</h2>
+
+            <h3>Método A: Drag & Drop (Más fácil)</h3>
+            <div class="step">
+                <ol>
+                    <li>Ve a <a href="https://netlify.com" target="_blank">netlify.com</a></li>
+                    <li>Haz scroll hasta "Want to deploy a new site?"</li>
+                    <li>Arrastra tu carpeta del portafolio aquí</li>
+                    <li>¡Listo! Tu sitio estará online en segundos</li>
+                </ol>
+            </div>
+
+            <h3>Método B: Conectar con GitHub</h3>
+            <div class="step">
+                <ol>
+                    <li>Sign up con GitHub</li>
+                    <li>New site from Git</li>
+                    <li>Selecciona tu repositorio</li>
+                    <li>Deploy</li>
+                </ol>
+            </div>
+
+            <div class="success">
+                ✓ <strong>Ventaja:</strong> Interfaz intuitiva, dominio libre, SSL incluido, updates automáticos
+            </div>
+
+            <!-- SECCIÓN DOMINIO -->
+            <h2 id="dominio">🌐 Conectar Dominio Propio</h2>
+
+            <p>Si tienes un dominio personalizado (ejemplo.com), conectarlo es fácil:</p>
+
+            <h3>Para GitHub Pages:</h3>
+            <div class="step">
+                <ol>
+                    <li>Ve a tu proveedor de DNS (GoDaddy, Namecheap, etc.)</li>
+                    <li>Busca "DNS Records" o "DNS Settings"</li>
+                    <li>Agrega registro A: <code>185.199.108.153</code></li>
+                    <li>En GitHub: Settings → Pages → Custom domain</li>
+                    <li>Ingresa tu dominio</li>
+                </ol>
+            </div>
+
+            <h3>Para Vercel/Netlify:</h3>
+            <div class="step">
+                <ol>
+                    <li>En tu panel de Vercel/Netlify: Domain settings</li>
+                    <li>Add custom domain</li>
+                    <li>Sigue las instrucciones de DNS</li>
+                    <li>Usualmente se resuelve en 24-48 horas</li>
+                </ol>
+            </div>
+
+            <!-- SECCIÓN TIPS -->
+            <h2 id="tips">💡 Tips de Optimización</h2>
+
+            <h3>Antes de desplegar:</h3>
+            <div class="warning" style="border-left-color: #667eea;">
+                ☑️ <strong>Checklist pre-deployment:</strong>
+                <ul>
+                    <li>✓ Reemplaza "Alejandro Martínez" con tu nombre</li>
+                    <li>✓ Agrega tu email real</li>
+                    <li>✓ Añade URLs reales de LinkedIn y GitHub</li>
+                    <li>✓ Actualiza los 3 proyectos con tus trabajos</li>
+                    <li>✓ Agrega tu foto de perfil</li>
+                    <li>✓ Revisa en móvil (usa DevTools: F12 → Responsive)</li>
+                    <li>✓ Prueba el formulario de contacto</li>
+                    <li>✓ Verifica todos los links externos</li>
+                    <li>✓ Comprueba el dark mode</li>
+                </ul>
+            </div>
+
+            <h3>Mejoras adicionales:</h3>
+            <table>
+                <tr>
+                    <th>Mejora</th>
+                    <th>Impacto</th>
+                    <th>Dificultad</th>
+                </tr>
+                <tr>
+                    <td>Agregar foto de perfil</td>
+                    <td>Alto</td>
+                    <td>Muy fácil</td>
+                </tr>
+                <tr>
+                    <td>Agregar más proyectos</td>
+                    <td>Alto</td>
+                    <td>Fácil</td>
+                </tr>
+                <tr>
+                    <td>Implementar backend para formulario</td>
+                    <td>Medio</td>
+                    <td>Moderado</td>
+                </tr>
+                <tr>
+                    <td>Agregar Google Analytics</td>
+                    <td>Medio</td>
+                    <td>Fácil</td>
+                </tr>
+                <tr>
+                    <td>SEO optimization</td>
+                    <td>Alto</td>
+                    <td>Moderado</td>
+                </tr>
+                <tr>
+                    <td>Blog/Artículos</td>
+                    <td>Medio</td>
+                    <td>Difícil</td>
+                </tr>
+            </table>
+
+            <h3>Para mejorar SEO:</h3>
+            <div class="step">
+                <p>Edita el <code>&lt;head&gt;</code> en index.html:</p>
+                <div class="code-block">&lt;meta name="description" content="Portafolio de [Tu Nombre]..."&gt;
+&lt;meta name="keywords" content="ingeniero sistemas, developer, python, javascript"&gt;
+&lt;meta name="author" content="Tu Nombre"&gt;</div>
+            </div>
+
+            <h3>Para agregar Google Analytics:</h3>
+            <div class="step">
+                <ol>
+                    <li>Ve a <a href="https://analytics.google.com" target="_blank">analytics.google.com</a></li>
+                    <li>Crea una nueva propiedad</li>
+                    <li>Copia el código de tracking</li>
+                    <li>Pégalo antes del <code>&lt;/head&gt;</code> en index.html</li>
+                </ol>
+            </div>
+
+            <h3>Para agregar formulario funcional:</h3>
+            <p>Considera usar servicios como:</p>
+            <ul>
+                <li><code>Formspree.io</code> - Fácil integración, gratuito</li>
+                <li><code>Basin.io</code> - Simple, sin código backend necesario</li>
+                <li><code>Netlify Forms</code> - Si usas Netlify</li>
+                <li><code>Firebase</code> - Más profesional, requiere setup</li>
+            </ul>
+
+            <!-- RESUMEN -->
+            <h2>📌 Resumen Rápido</h2>
+
+            <table>
+                <tr>
+                    <th>Opción</th>
+                    <th>Costo</th>
+                    <th>Facilidad</th>
+                    <th>Recomendado para</th>
+                </tr>
+                <tr>
+                    <td><strong>Local</strong></td>
+                    <td>Gratuito</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Pruebas y desarrollo</td>
+                </tr>
+                <tr>
+                    <td><strong>GitHub Pages</strong></td>
+                    <td>Gratuito</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>Portfolio con Git</td>
+                </tr>
+                <tr>
+                    <td><strong>Vercel</strong></td>
+                    <td>Gratuito</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td><strong>RECOMENDADO</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Netlify</strong></td>
+                    <td>Gratuito</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>Alternativa a Vercel</td>
+                </tr>
+            </table>
+
+            <div class="success">
+                <strong>🎉 Recomendación:</strong> Usa <strong>Vercel</strong> o <strong>Netlify</strong> para mejor rendimiento y facilidad. Ambos son gratuitos y profesionales.
+            </div>
+
+            <h2>🆘 Solución de Problemas</h2>
+
+            <h3>El sitio no carga</h3>
+            <div class="step">
+                ☑️ Verifica que todos los archivos estén en la misma carpeta<br>
+                ☑️ Revisa la consola del navegador (F12)<br>
+                ☑️ Comprueba tu conexión a internet<br>
+                ☑️ Intenta en otro navegador
+            </div>
+
+            <h3>Dark mode no funciona</h3>
+            <div class="step">
+                ☑️ Limpiar caché del navegador (Ctrl+Shift+Del)<br>
+                ☑️ Verificar que script.js está cargado<br>
+                ☑️ Revisar consola para errores
+            </div>
+
+            <h3>Formulario no funciona</h3>
+            <div class="step">
+                ☑️ Esto es normal - es una demostración sin backend<br>
+                ☑️ Para producción, usa Formspree o Firebase<br>
+                ☑️ Ver sección de "Para agregar formulario funcional"
+            </div>
+
+        </main>
+
+        <footer>
+            <p><strong>Portafolio Web Profesional v1.0</strong></p>
+            <p>Creado para ingenieros de sistemas en búsqueda de oportunidades</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Made with ❤️ by Copilot</p>
+        </footer>
+    </div>
+</body>
+</html>
